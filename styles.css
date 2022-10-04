@@ -1,0 +1,166 @@
+/* --Contenido:-- */
+/* --1. Importaciones-- */
+/* --2. Variables-- */
+/* --3. Estilos-- */
+
+/* --1. Importaciones-- */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* --2. Variables-- */
+:root {
+  /*  Primary  */
+  --softBlue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --cyanTransparent: hsla(178, 100%, 50%, 0.25);
+
+  /* Neutral */
+  --veryDarkBlue-main: hsl(217, 54%, 11%);
+  /* main BG */
+  --veryDarkBlue-card: hsl(216, 50%, 16%);
+  /* card BG */
+  --veryBarkBlue-line: hsl(215, 32%, 27%);
+  /* line */
+  --white: hsl(0, 0%, 100%);
+}
+
+/* --3. Estilos-- */
+* {
+  /* CSS soft-Reset */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--veryDarkBlue-main);
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem; /** 18px **/
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 21.875rem 1fr; /** 350px **/
+  grid-template-rows: 1fr 37.313rem 1fr; /** 597px **/
+  grid-template-areas:
+    ". . ."
+    ". card ."
+    ". . .";
+}
+
+main {
+  grid-area: card;
+}
+
+article {
+  background-color: var(--veryDarkBlue-card);
+  width: 21.875rem;
+  height: 37.313rem;
+  border-radius: 0.938rem;
+  padding: 1.563rem; /** 25px **/
+}
+
+.nft-preview .nft-image {
+  width: 18.938rem; /** 303px **/
+  height: 18.938rem;
+  border-radius: 0.625rem; /** 10px **/
+  z-index: -1;
+}
+
+.eye-icon {  /** ProTip Danielito**/
+  visibility: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+  cursor: pointer;
+}
+
+/* .eye-icon:hover {
+        visibility: visible;
+        display: block;                      
+      } */
+
+.nft-preview:hover>.eye-icon { /** ProTip Danielito**/
+  visibility: visible;
+}
+
+.nft-preview {
+  position: relative;
+}
+
+.nft-preview:hover::after {
+  /*revisar */
+  content: "";
+  position: absolute;
+  width: 18.938rem;
+  height: 18.938rem;
+  top: 0%;
+  left: 0%;
+  border-radius: 0.625rem;
+  background: var(--cyanTransparent);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--Cyan);
+}
+
+p {
+  color: var(--veryBarkBlue-line);
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.nft-offer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-preview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.user-preview img {
+  width: 2.188rem; /** 35px **/
+  border-radius: 50%;
+  border: 1px solid var(--white);
+}
+
+.nft-info,
+.nft-info>p,
+.nft-offer,
+.user-preview {
+  margin-top: 1.563rem;
+}
+
+.user-preview p {
+  padding-left: 0.938rem; /** 15px **/
+}
+
+.user-preview {
+  border-top: 1px solid var(--veryBarkBlue-line);
+  padding-top: 0.938rem;
+}
+
+.nft-price,
+.nft-time {
+  padding-left: 0.5rem;
+}
+
+.nft-price {
+  color: var(--Cyan);
+}
