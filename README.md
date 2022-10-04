@@ -13,8 +13,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/qr-code-component-using-css-grid-khjw2jlY1c)
-- Live Site URL: [GitHub](https://adndavid.github.io/FrontendMentor-Challenge-3/)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/nft-preview-card-component-using-ccs-grid-pseudoclasspseudoelement-jpn3plSQ0I)
+- Live Site URL: [GitHub Pages](https://adndavid.github.io/FrontendMentor-Challenge-3/)
 
 ## My process
 
